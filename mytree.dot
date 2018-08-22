@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="Age <= 29.5\ngini = 0.363\nsamples = 24420\nvalue = [18597, 5823]\nclass = Target[<=50K]"] ;
+1 [label="Age <= 25.5\ngini = 0.1\nsamples = 7308\nvalue = [6922, 386]\nclass = Target[<=50K]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Age <= 23.5\ngini = 0.033\nsamples = 4842\nvalue = [4760, 82]\nclass = Target[<=50K]"] ;
+1 -> 2 ;
+3 [label="gini = 0.011\nsamples = 3591\nvalue = [3572, 19]\nclass = Target[<=50K]"] ;
+2 -> 3 ;
+4 [label="gini = 0.096\nsamples = 1251\nvalue = [1188, 63]\nclass = Target[<=50K]"] ;
+2 -> 4 ;
+5 [label="C(Relationship)[T.Wife] <= 0.5\ngini = 0.216\nsamples = 2466\nvalue = [2162, 304]\nclass = Target[<=50K]"] ;
+1 -> 5 ;
+6 [label="gini = 0.189\nsamples = 2323\nvalue = [2078, 245]\nclass = Target[<=50K]"] ;
+5 -> 6 ;
+7 [label="gini = 0.485\nsamples = 143\nvalue = [84, 59]\nclass = Target[<=50K]"] ;
+5 -> 7 ;
+8 [label="C(Sex)[T.Male] <= 0.5\ngini = 0.434\nsamples = 17112\nvalue = [11675, 5437]\nclass = Target[<=50K]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="C(Relationship)[T.Wife] <= 0.5\ngini = 0.261\nsamples = 5113\nvalue = [4324, 789]\nclass = Target[<=50K]"] ;
+8 -> 9 ;
+10 [label="gini = 0.136\nsamples = 4159\nvalue = [3853, 306]\nclass = Target[<=50K]"] ;
+9 -> 10 ;
+11 [label="gini = 0.5\nsamples = 954\nvalue = [471, 483]\nclass = Target[>50K]"] ;
+9 -> 11 ;
+12 [label="C(Occupation)[T.Exec-managerial] <= 0.5\ngini = 0.475\nsamples = 11999\nvalue = [7351, 4648]\nclass = Target[<=50K]"] ;
+8 -> 12 ;
+13 [label="gini = 0.448\nsamples = 10064\nvalue = [6653, 3411]\nclass = Target[<=50K]"] ;
+12 -> 13 ;
+14 [label="gini = 0.461\nsamples = 1935\nvalue = [698, 1237]\nclass = Target[>50K]"] ;
+12 -> 14 ;
+}
